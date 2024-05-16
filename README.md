@@ -65,6 +65,7 @@ Open your web browser and go to http://127.0.0.1:5000/ to see the website.
 - Fill in the date (YYYY-MM-DD) and the question, then submit the form.
 
 ## Project Structure
+```
 daily-question-website/
 │
 ├── static/
@@ -80,6 +81,7 @@ daily-question-website/
 ├── app.py
 ├── database.db
 └── README.md
+```
 - `static/css/styles.css`: CSS file for styling the website.
 - `static/js/main.js`: JavaScript file for handling form submissions and clearing answers.
 - `templates/`: Contains HTML templates for the main page and admin page.
