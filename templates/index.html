@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Question</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="question">
+            {{ question }}
+        </div>
+        <div class="answer-form">
+            <form id="answerForm">
+                <input type="text" name="answer" id="answer" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <button id="clearAnswersButton">Clear Answers</button>
+        <div class="summary">
+            <h3>Summary of Answers:</h3>
+            <ul id="summaryList">
+                {% for answer, count in summary %}
+                    <li>{{ answer }}: {{ count }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
